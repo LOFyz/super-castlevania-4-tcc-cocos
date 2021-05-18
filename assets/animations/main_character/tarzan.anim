@@ -1,0 +1,49 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "tarzan",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.08333333333333333,
+  "sample": 60,
+  "speed": 0.1,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "63b8d793-fbbc-4670-a007-3402c8170a67"
+            }
+          },
+          {
+            "frame": 0.016666666666666666,
+            "value": {
+              "__uuid__": "722821d0-0421-4006-93f6-b8c12d68280a"
+            }
+          },
+          {
+            "frame": 0.03333333333333333,
+            "value": {
+              "__uuid__": "7f185066-0825-4b58-821e-3fbfd2c45467"
+            }
+          },
+          {
+            "frame": 0.05,
+            "value": {
+              "__uuid__": "59de5e74-9f7b-49aa-b4ca-4c2d300eb816"
+            }
+          },
+          {
+            "frame": 0.06666666666666667,
+            "value": {
+              "__uuid__": "64714ad9-ecce-4c11-bca8-5fb2ccdee0a4"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
