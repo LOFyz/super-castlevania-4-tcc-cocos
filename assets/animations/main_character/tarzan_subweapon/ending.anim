@@ -3,9 +3,9 @@
   "_name": "ending",
   "_objFlags": 0,
   "_native": "",
-  "_duration": 0.05,
-  "sample": 60,
-  "speed": 0.1,
+  "_duration": 0.1,
+  "sample": 30,
+  "speed": 0.2,
   "wrapMode": 1,
   "curveData": {
     "comps": {
@@ -18,13 +18,13 @@
             }
           },
           {
-            "frame": 0.016666666666666666,
+            "frame": 0.03333333333333333,
             "value": {
               "__uuid__": "2d12339b-d1ab-4b42-a7b1-fb20c2b6e739"
             }
           },
           {
-            "frame": 0.03333333333333333,
+            "frame": 0.06666666666666667,
             "value": {
               "__uuid__": "716e5288-17f3-40f4-b315-08888084a469"
             }
