@@ -276,7 +276,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "main_character",
+    "_name": "0",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -314,8 +314,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        357,
-        326,
+        291,
+        317,
         0,
         0,
         0,
@@ -337,7 +337,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "f6XAz5/+RHPrvnplXPoQ3c"
+    "_id": "45grgMuD5JVrjy8NW2zhWJ"
   },
   {
     "__type__": "cc.Sprite",
@@ -369,7 +369,7 @@
     "_fillRange": 0,
     "_isTrimmedMode": true,
     "_atlas": null,
-    "_id": "d2ybFkB3dJ0osYQOS+jv2K"
+    "_id": "12N1U/n3JAeLHKLbBgVALa"
   },
   {
     "__type__": "cc.Animation",
@@ -383,9 +383,6 @@
       "__uuid__": "28ab2715-c682-42aa-8287-cd00eb36749f"
     },
     "_clips": [
-      {
-        "__uuid__": "28ab2715-c682-42aa-8287-cd00eb36749f"
-      },
       {
         "__uuid__": "b610503b-fe6d-4729-9ffa-12335ec9a070"
       },
@@ -424,9 +421,12 @@
       },
       {
         "__uuid__": "7654c99a-abdd-457b-8d12-24e57edb1bea"
+      },
+      {
+        "__uuid__": "28ab2715-c682-42aa-8287-cd00eb36749f"
       }
     ],
     "playOnLoad": false,
-    "_id": "b7zKpISSZOcb1r5ZnRIRh2"
+    "_id": "daeCqjKwBFoqGnhUvrVY/F"
   }
 ]
