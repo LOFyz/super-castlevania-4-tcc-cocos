@@ -1,0 +1,55 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "crouch_walking",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.2,
+  "sample": 30,
+  "speed": 0.2,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "09ebcfa3-ad67-4012-a67a-170c8a738d6d"
+            }
+          },
+          {
+            "frame": 0.03333333333333333,
+            "value": {
+              "__uuid__": "7a1b6f78-9713-4ed6-a540-9a4c7c5586ea"
+            }
+          },
+          {
+            "frame": 0.06666666666666667,
+            "value": {
+              "__uuid__": "f2ecdd64-2cb8-428b-90cf-1d87197ee8c5"
+            }
+          },
+          {
+            "frame": 0.1,
+            "value": {
+              "__uuid__": "6e81f6ec-04cc-4d17-bd98-fae42aac840e"
+            }
+          },
+          {
+            "frame": 0.13333333333333333,
+            "value": {
+              "__uuid__": "2e95dc1d-fafd-4b34-8f65-1834247ab85c"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "6cc01c02-db13-4282-9e5b-0388442d21a1"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
