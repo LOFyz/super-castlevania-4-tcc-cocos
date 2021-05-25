@@ -1,7 +1,7 @@
 const { ccclass } = cc._decorator;
 
 @ccclass
-export default class blockPlatform extends cc.Component {
+export default class BlockPlatform extends cc.Component {
   private aux = 0;
 
   private isInContact = false;
@@ -11,7 +11,7 @@ export default class blockPlatform extends cc.Component {
       if (this.aux === 0) {
         this.getComponent(cc.Animation).play('bridge_block_platform');
       }
-      if (this.aux != 0){
+      if (this.aux !== 0) {
         this.getComponent(cc.Animation).resume();
       }
       this.isInContact = true;
