@@ -1,6 +1,4 @@
-/* eslint-disable no-param-reassign */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-const { ccclass, property } = cc._decorator;
+const { ccclass } = cc._decorator;
 
 @ccclass
 export default class blockPlatform extends cc.Component {
@@ -8,17 +6,19 @@ export default class blockPlatform extends cc.Component {
 
   private isInContact = false;
 
-  public onBeginContact(_contact: Event, _selfCollider: cc.BoxCollider, _otherCollider: cc.BoxCollider): void {
+  public onBeginContact(_otherCollider: cc.BoxCollider): void {
     if (_otherCollider.node.getComponent(cc.RigidBody).type === cc.RigidBodyType.Dynamic) {
       if (this.aux === 0) {
         this.getComponent(cc.Animation).play('bridge_block_platform');
       }
+      if (this.aux != 0){
+        this.getComponent(cc.Animation).resume();
+      }
       this.isInContact = true;
-      this.getComponent(cc.Animation).resume();
     }
   }
 
-  public onEndContact(_contact: Event, _selfCollider: cc.BoxCollider, _otherCollider: cc.BoxCollider): void {
+  public onEndContact(): void {
     this.isInContact = false;
     this.getComponent(cc.Animation).pause();
   }
