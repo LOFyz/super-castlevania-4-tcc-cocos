@@ -81,10 +81,10 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 70
+        "__id__": 73
       },
       {
-        "__id__": 71
+        "__id__": 74
       }
     ],
     "_prefab": null,
@@ -2671,6 +2671,15 @@
       },
       {
         "__id__": 69
+      },
+      {
+        "__id__": 70
+      },
+      {
+        "__id__": 71
+      },
+      {
+        "__id__": 72
       }
     ],
     "_prefab": null,
@@ -2697,7 +2706,7 @@
       "ctor": "Float64Array",
       "array": [
         50.342,
-        63.046,
+        100.755,
         0,
         0,
         0,
@@ -2810,6 +2819,83 @@
     ],
     "playOnLoad": false,
     "_id": "daeCqjKwBFoqGnhUvrVY/F"
+  },
+  {
+    "__type__": "cc.RigidBody",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 67
+    },
+    "_enabled": true,
+    "_type": 2,
+    "_allowSleep": true,
+    "_gravityScale": 1,
+    "_linearDamping": 0,
+    "_angularDamping": 0,
+    "_linearVelocity": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_angularVelocity": 0,
+    "_fixedRotation": true,
+    "enabledContactListener": true,
+    "bullet": false,
+    "awakeOnLoad": true,
+    "_id": "c5BTMImadKZazGgh/P9aWk"
+  },
+  {
+    "__type__": "cc.PhysicsBoxCollider",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 67
+    },
+    "_enabled": true,
+    "tag": 0,
+    "_density": 1,
+    "_sensor": false,
+    "_friction": 20,
+    "_restitution": 0,
+    "body": null,
+    "_offset": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 3
+    },
+    "_size": {
+      "__type__": "cc.Size",
+      "width": 24,
+      "height": 40
+    },
+    "_id": "f5xx9yxtlNHJpQaMFEmK91"
+  },
+  {
+    "__type__": "cc.PhysicsBoxCollider",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 67
+    },
+    "_enabled": true,
+    "tag": 2,
+    "_density": 1,
+    "_sensor": false,
+    "_friction": 20,
+    "_restitution": 0,
+    "body": null,
+    "_offset": {
+      "__type__": "cc.Vec2",
+      "x": -0.2,
+      "y": -20.1
+    },
+    "_size": {
+      "__type__": "cc.Size",
+      "width": 20.6,
+      "height": 5.9
+    },
+    "_id": "8fmRsoeTNPAp+nR3+PJRAe"
   },
   {
     "__type__": "cc.Canvas",
