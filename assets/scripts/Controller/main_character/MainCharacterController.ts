@@ -1,3 +1,5 @@
+import DIRECTION from '../../Actor/DIRECTION';
+import MainCharacter from '../../Actor/Main_Character/MainCharacter';
 import KeyboardController from '../KeyboardController';
 
 const { ccclass, property } = cc._decorator;
@@ -5,8 +7,7 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class MainCharacterController extends KeyboardController {
   @property
-  // Será mudado quando o codigo do personagem for criado
-  private character: cc.Node = null;
+  private mainCharacter: MainCharacter = null;
 
   private keysPressed: Array<boolean> = [];
 
@@ -19,8 +20,11 @@ export default class MainCharacterController extends KeyboardController {
   }
 
   public update(): void {
-    // if (cc.macro.KEY.a in this.keysPressed){
-    //   função
-    // }
+    if (cc.macro.KEY.a || cc.macro.KEY.left in this.keysPressed) {
+      this.mainCharacter.move(DIRECTION.LEFT);
+    }
+    if (cc.macro.KEY.d || cc.macro.KEY.right in this.keysPressed) {
+      this.mainCharacter.move(DIRECTION.RIGHT);
+    }
   }
 }
