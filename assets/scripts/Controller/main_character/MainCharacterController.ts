@@ -28,9 +28,11 @@ export default class MainCharacterController extends KeyboardController {
     switch (event.keyCode) {
       case cc.macro.KEY.a || cc.macro.KEY.left:
         delete this.keysPressed[event.keyCode];
+        this.mainCharacter.direction = 0;
         break;
       case cc.macro.KEY.d || cc.macro.KEY.right:
         delete this.keysPressed[event.keyCode];
+        this.mainCharacter.direction = 0;
         break;
       default:
     }

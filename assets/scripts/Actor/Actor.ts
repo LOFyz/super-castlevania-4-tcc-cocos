@@ -21,7 +21,7 @@ export default abstract class Actor extends cc.Component {
 
   protected rigidBody: cc.RigidBody;
 
-  protected direction: DIRECTION = DIRECTION.IDLE;
+  public direction: DIRECTION = DIRECTION.IDLE;
 
   public onLoad(): void {
     this.rigidBody = this.getComponent(cc.RigidBody);
