@@ -30,8 +30,10 @@ export default class MainCharacter extends Actor {
     }
   }
 
-  public onBeginContact(): void {
-    this.isJumping = false;
+  public onBeginContact(e: Event, selfCollider: cc.Collider): void {
+    if (selfCollider.tag === 2) {
+      this.isJumping = false;
+    }
   }
 
   public reface(direction: DIRECTION): void {
