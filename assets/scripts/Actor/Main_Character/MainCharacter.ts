@@ -24,7 +24,7 @@ export default class MainCharacter extends Actor {
     }
   }
 
-  public refacing(direction: DIRECTION): void {
+  public reface(direction: DIRECTION): void {
     // eslint-disable-next-line operator-assignment
     this.node.scaleX = this.node.scaleX * -1;
     this.facing = direction;
