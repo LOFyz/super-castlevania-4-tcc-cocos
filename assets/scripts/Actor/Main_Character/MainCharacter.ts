@@ -25,9 +25,13 @@ export default class MainCharacter extends Actor {
 
   public jump(): void {
     if (this.isInTheFloor) {
-      this.isJumping = true;
       this.rigidBody.applyForceToCenter(cc.v2(0, this.jumpForce), true);
+      this.isJumping = true;
     }
+  }
+
+  public onBeginContact(): void {
+    this.isJumping = false;
   }
 
   public reface(direction: DIRECTION): void {
