@@ -11,6 +11,12 @@ export default class MainCharacter extends Actor {
       this.reface(direction);
     }
     this.direction = direction;
+    if (
+      (this.direction > 0 && this.rigidBody.linearVelocity.x < this.maxSpeed) ||
+      (this.direction < 0 && this.rigidBody.linearVelocity.x > -this.maxSpeed)
+    ) {
+      this.rigidBody.applyForceToCenter(cc.v2(this.direction * this.walkForce, 0), true);
+    }
   }
 
   public get isMoving(): boolean {
@@ -28,15 +34,5 @@ export default class MainCharacter extends Actor {
     // eslint-disable-next-line operator-assignment
     this.node.scaleX = this.node.scaleX * -1;
     this.facing = direction;
-  }
-
-  public update(): void {
-    if (
-      (this.direction > 0 && this.rigidBody.linearVelocity.x < this.maxSpeed) ||
-      (this.direction < 0 && this.rigidBody.linearVelocity.x > -this.maxSpeed)
-    ) {
-      this.rigidBody.applyForceToCenter(cc.v2(this.direction * this.walkForce, 0), true);
-      this.direction = 0;
-    }
   }
 }
