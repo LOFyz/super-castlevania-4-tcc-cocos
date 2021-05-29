@@ -16,7 +16,7 @@ export default class MainCharacterController extends KeyboardController {
   public onKeyDown(event: cc.Event.EventKeyboard): void {
     switch (event.keyCode) {
       case cc.macro.KEY.space:
-        this.keysPressed['JUMP'] = true;
+        this.mainCharacter.jump();
         break;
       case cc.macro.KEY.a || cc.macro.KEY.left:
         this.keysPressed['LEFT'] = true;
@@ -29,9 +29,6 @@ export default class MainCharacterController extends KeyboardController {
 
   public onKeyUp(event: cc.Event.EventKeyboard): void {
     switch (event.keyCode) {
-      case cc.macro.KEY.space:
-        delete this.keysPressed['JUMP'];
-        break;
       case cc.macro.KEY.a || cc.macro.KEY.left:
         delete this.keysPressed['LEFT'];
         break;
@@ -42,9 +39,6 @@ export default class MainCharacterController extends KeyboardController {
   }
 
   public update(): void {
-    if ('JUMP' in this.keysPressed) {
-      this.mainCharacter.jump();
-    }
     if ('LEFT' in this.keysPressed) {
       this.mainCharacter.move(DIRECTION.LEFT);
     }

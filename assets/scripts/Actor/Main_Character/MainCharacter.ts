@@ -8,7 +8,7 @@ export default class MainCharacter extends Actor {
 
   public move(direction: DIRECTION): void {
     if (direction !== this.facing && direction !== DIRECTION.IDLE) {
-      this.refacing(direction);
+      this.reface(direction);
     }
     this.direction = direction;
   }
@@ -24,7 +24,7 @@ export default class MainCharacter extends Actor {
     }
   }
 
-  public refacing(direction: DIRECTION): void {
+  public reface(direction: DIRECTION): void {
     // eslint-disable-next-line operator-assignment
     this.node.scaleX = this.node.scaleX * -1;
     this.facing = direction;
@@ -37,11 +37,6 @@ export default class MainCharacter extends Actor {
     ) {
       this.rigidBody.applyForceToCenter(cc.v2(this.direction * this.walkForce, 0), true);
       this.direction = 0;
-    }
-    if (this.rigidBody.linearVelocity.y === 0 && this.isJumping !== false) {
-      this.scheduleOnce(() => {
-        this.isJumping = false;
-      }, 0.5);
     }
   }
 }
