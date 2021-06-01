@@ -4,7 +4,15 @@ const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default abstract class Actor extends cc.Component {
-  public isJumping = false;
+  public _isJumping = false;
+
+  public get isJumping(): boolean {
+    return this._isJumping;
+  }
+
+  public set isJumping(value: boolean) {
+    this._isJumping = value;
+  }
 
   @property(cc.Float)
   public jumpForce = 0;
