@@ -33,8 +33,8 @@ export default class MainCharacter extends Actor {
     }
   }
 
-  public get isMoving(): boolean {
-    return this.rigidBody.linearVelocity.x > 5 || this.rigidBody.linearVelocity.x < -5;
+  public get isWalking(): boolean {
+    return this.direction !== 0;
   }
 
   public jump(): void {

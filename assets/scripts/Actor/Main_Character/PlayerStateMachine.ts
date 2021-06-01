@@ -24,11 +24,11 @@ export default class PlayerStateMachine extends StateMachine<PLAYER_STATES, Main
       this.actor.state = PLAYER_STATES.Idle;
     }
 
-    if (this.actor.isMoving && !this.actor.isJumping && this.actor.state !== PLAYER_STATES.Walking) {
+    if (this.actor.isWalking && !this.actor.isJumping && this.actor.state !== PLAYER_STATES.Walking) {
       this.actor.state = PLAYER_STATES.Walking;
     }
 
-    if (!this.actor.isMoving && !this.actor.isJumping && this.actor.state !== PLAYER_STATES.Idle) {
+    if (!this.actor.isWalking && !this.actor.isJumping && this.actor.state !== PLAYER_STATES.Idle) {
       this.actor.state = PLAYER_STATES.Idle;
     }
   }
