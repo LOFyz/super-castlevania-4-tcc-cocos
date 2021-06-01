@@ -21,9 +21,9 @@ export default class Camera extends cc.Component {
     this.node.x = cc.misc.clampf(cc.misc.lerp(this.node.x, value, 0.2), this.limits[0], this.limits[1]);
   }
 
-  public start(): void {
+  public onLoad(): void {
     this.node.x = this.player.x;
-    this.limits[0] = this.node.parent.convertToNodeSpaceAR(this.map.getPosition()).x;
+    this.limits[0] = this.node.parent.convertToWorldSpaceAR(this.map.getPosition()).x;
     this.limits[1] = this.map.width * this.map.scaleX - this.node.parent.width;
   }
 
