@@ -15,7 +15,7 @@ export default abstract class Actor extends cc.Component {
   @property(cc.Float)
   public maxSpeed = 0;
 
-  public rigidBody: cc.RigidBody;
+  protected rigidBody: cc.RigidBody;
 
   public direction: DIRECTION = DIRECTION.IDLE;
 

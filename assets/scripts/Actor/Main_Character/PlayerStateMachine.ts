@@ -1,5 +1,4 @@
 /* eslint-disable no-empty */
-/* eslint-disable @typescript-eslint/no-empty-function */
 import StateMachine from '../../../utils/StateMachine';
 import MainCharacter from './MainCharacter';
 import PLAYER_STATES from './PLAYER_STATES';
