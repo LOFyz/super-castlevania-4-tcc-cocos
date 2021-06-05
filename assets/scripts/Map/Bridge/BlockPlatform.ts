@@ -1,11 +1,12 @@
-const { ccclass } = cc._decorator;
+const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class BlockPlatform extends cc.Component {
-  public onBeginContact(_otherCollider: cc.BoxCollider): void {
-    if (_otherCollider.node.getComponent(cc.RigidBody).type === cc.RigidBodyType.Dynamic) {
-      this.getComponent(cc.Animation).play('bridge_block_platform');
-    }
+  @property(cc.Node)
+  public player: cc.Node = null;
+
+  public onBeginContact(): void {
+    this.getComponent(cc.Animation).play('bridge_block_platform');
   }
 
   public onAnimationEnd(): void {
