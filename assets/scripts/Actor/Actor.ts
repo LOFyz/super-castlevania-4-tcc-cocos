@@ -4,10 +4,10 @@ const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default abstract class Actor extends cc.Component {
-  protected isJumping = false;
+  public isJumping = false;
 
   public get isInTheFloor(): boolean {
-    return this.rigidBody.linearVelocity.y === 0 && this.isJumping === false;
+    return this.rigidBody.linearVelocity.y !== 0 && !this.isJumping;
   }
 
   @property(cc.Float)
@@ -21,7 +21,7 @@ export default abstract class Actor extends cc.Component {
 
   protected rigidBody: cc.RigidBody;
 
-  protected direction: DIRECTION = DIRECTION.IDLE;
+  public direction: DIRECTION = DIRECTION.IDLE;
 
   public onLoad(): void {
     this.rigidBody = this.getComponent(cc.RigidBody);
