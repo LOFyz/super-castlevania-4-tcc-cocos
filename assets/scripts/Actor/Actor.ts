@@ -6,6 +6,10 @@ const { ccclass, property } = cc._decorator;
 export default abstract class Actor extends cc.Component {
   public isJumping = false;
 
+  public get isInTheFloor(): boolean {
+    return this.rigidBody.linearVelocity.y !== 0 && !this.isJumping;
+  }
+
   @property(cc.Float)
   public jumpForce = 0;
 
