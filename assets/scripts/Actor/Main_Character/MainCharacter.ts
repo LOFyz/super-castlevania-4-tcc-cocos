@@ -9,6 +9,8 @@ export default class MainCharacter extends Actor {
 
   private _state: PLAYER_STATES = PLAYER_STATES.Idle;
 
+  public isInAStair = false;
+
   public get state(): PLAYER_STATES {
     return this._state;
   }
