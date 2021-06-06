@@ -10,9 +10,21 @@ export default class PlayerStateMachine extends StateMachine<PLAYER_STATES, Main
   @property(MainCharacter)
   protected actor: MainCharacter = null;
 
-  public onAnimationStart(): void {}
+  public onAnimationStart(): void {
+    console.log('a');
+  }
 
-  public onAnimationEnd(): void {}
+  public onAnimationEnd(): void {
+    console.log('a');
+  }
+
+  public downStairs(): void {
+    this.actor.state = PLAYER_STATES.Downstairs;
+  }
+
+  public upStairs(): void {
+    this.actor.state = PLAYER_STATES.Upstairs;
+  }
 
   public update(): void {
     if (this.actor.isJumping && this.actor.state !== PLAYER_STATES.Jumping) {
