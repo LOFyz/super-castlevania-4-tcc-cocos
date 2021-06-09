@@ -1,5 +1,6 @@
 /* eslint-disable no-empty */
 import StateMachine from '../../../utils/StateMachine';
+import DIRECTION from '../DIRECTION';
 import MainCharacter from './MainCharacter';
 import PLAYER_STATES from './PLAYER_STATES';
 
@@ -18,29 +19,37 @@ export default class PlayerStateMachine extends StateMachine<PLAYER_STATES, Main
     console.log('a');
   }
 
-  public downStairs(): void {
-    this.actor.state = PLAYER_STATES.Downstairs;
+  public downStairs(top: number): void {
+    this.actor.isInAStair = true;
+    this.actor.state = PLAYER_STATES.DownstairsIdle;
   }
 
-  public upStairs(): void {
-    this.actor.state = PLAYER_STATES.Upstairs;
+  public upStairs(top: number): void {
+    this.actor.isInAStair = true;
+    this.actor.state = PLAYER_STATES.UpstairsIdle;
   }
 
   public update(): void {
-    if (this.actor.isJumping && this.actor.state !== PLAYER_STATES.Jumping) {
-      this.actor.state = PLAYER_STATES.Jumping;
-    }
+    if (!this.actor.isInAStair) {
+      if (this.actor.isJumping && this.actor.state !== PLAYER_STATES.Jumping) {
+        this.actor.state = PLAYER_STATES.Jumping;
+      }
 
-    if (!this.actor.isJumping && this.actor.state === PLAYER_STATES.Jumping) {
-      this.actor.state = PLAYER_STATES.Idle;
-    }
+      if (!this.actor.isJumping && this.actor.state === PLAYER_STATES.Jumping) {
+        this.actor.state = PLAYER_STATES.Idle;
+      }
 
-    if (this.actor.isWalking && !this.actor.isJumping && this.actor.state !== PLAYER_STATES.Walking) {
-      this.actor.state = PLAYER_STATES.Walking;
-    }
+      if (this.actor.isWalking && !this.actor.isJumping && this.actor.state !== PLAYER_STATES.Walking) {
+        this.actor.state = PLAYER_STATES.Walking;
+      }
 
-    if (!this.actor.isWalking && !this.actor.isJumping && this.actor.state !== PLAYER_STATES.Idle) {
-      this.actor.state = PLAYER_STATES.Idle;
+      if (!this.actor.isWalking && !this.actor.isJumping && this.actor.state !== PLAYER_STATES.Idle) {
+        this.actor.state = PLAYER_STATES.Idle;
+      }
     }
+    // if (this.actor.isInAStair) {
+    //   if()
+
+    // }
   }
 }
