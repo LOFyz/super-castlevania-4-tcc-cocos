@@ -44,8 +44,8 @@ export default class MainCharacter extends Actor {
     }
   }
 
-  public onBeginContact(e: Event, selfCollider: cc.Collider): void {
-    if (selfCollider.tag === 2) {
+  public onBeginContact(e: cc.PhysicsContact, selfCollider: cc.Collider): void {
+    if (selfCollider.tag === 2 && !e.disabled) {
       this.isJumping = false;
     }
   }
