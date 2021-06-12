@@ -10,25 +10,38 @@ export default class PlayerStateMachine extends StateMachine<PLAYER_STATES, Main
   @property(MainCharacter)
   protected actor: MainCharacter = null;
 
-  public onAnimationStart(): void {}
+  public onAnimationStart(): void {
+    console.log();
+  }
 
-  public onAnimationEnd(): void {}
+  public onAnimationEnd(): void {
+    console.log();
+  }
 
   public update(): void {
-    if (this.actor.isJumping && this.actor.state !== PLAYER_STATES.Jumping) {
-      this.actor.state = PLAYER_STATES.Jumping;
-    }
+    if (!this.actor.isInAStair) {
+      if (this.actor.isJumping && this.actor.state !== PLAYER_STATES.Jumping) {
+        this.actor.state = PLAYER_STATES.Jumping;
+      }
 
-    if (!this.actor.isJumping && this.actor.state === PLAYER_STATES.Jumping) {
-      this.actor.state = PLAYER_STATES.Idle;
-    }
+      if (!this.actor.isJumping && this.actor.state === PLAYER_STATES.Jumping) {
+        this.actor.state = PLAYER_STATES.Idle;
+      }
 
-    if (this.actor.isWalking && !this.actor.isJumping && this.actor.state !== PLAYER_STATES.Walking) {
-      this.actor.state = PLAYER_STATES.Walking;
-    }
+      if (this.actor.isWalking && !this.actor.isJumping && this.actor.state !== PLAYER_STATES.Walking) {
+        this.actor.state = PLAYER_STATES.Walking;
+      }
 
-    if (!this.actor.isWalking && !this.actor.isJumping && this.actor.state !== PLAYER_STATES.Idle) {
-      this.actor.state = PLAYER_STATES.Idle;
+      if (!this.actor.isWalking && !this.actor.isJumping && this.actor.state !== PLAYER_STATES.Idle) {
+        this.actor.state = PLAYER_STATES.Idle;
+      }
+    } else {
+      if (!this.actor.isWalking && !this.actor.isJumping && this.actor.state !== PLAYER_STATES.Idle) {
+        this.actor.state = PLAYER_STATES.Idle;
+      }
+      if (this.actor.isWalking && !this.actor.isJumping && this.actor.state !== PLAYER_STATES.Walking) {
+        this.actor.state = PLAYER_STATES.Walking;
+      }
     }
   }
 }
