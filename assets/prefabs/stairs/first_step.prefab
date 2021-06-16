@@ -150,7 +150,7 @@
     "_id": ""
   },
   {
-    "__type__": "cc.PhysicsBoxCollider",
+    "__type__": "cc.PhysicsChainCollider",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -163,16 +163,84 @@
     "_friction": 0.2,
     "_restitution": 0,
     "body": null,
-    "_offset": {
-      "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
-    },
-    "_size": {
-      "__type__": "cc.Size",
-      "width": 27,
-      "height": 16
-    },
+    "loop": false,
+    "points": [
+      {
+        "__type__": "cc.Vec2",
+        "x": -4.5,
+        "y": 8
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": -5.5,
+        "y": 4
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": -3.5,
+        "y": 3
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": -3.5,
+        "y": 0
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": -12.5,
+        "y": 0
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": -13.5,
+        "y": -8
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 1.5,
+        "y": -8
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 3.5,
+        "y": -5
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 4.5,
+        "y": 2
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 6.5,
+        "y": 0
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 6.5,
+        "y": 2
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 8.5,
+        "y": 2
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 8.5,
+        "y": 5
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 10.5,
+        "y": 7
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 13.5,
+        "y": 7
+      }
+    ],
     "_id": ""
   },
   {

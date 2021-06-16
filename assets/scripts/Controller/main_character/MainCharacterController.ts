@@ -45,14 +45,16 @@ export default class MainCharacterController extends KeyboardController {
   }
 
   public update(): void {
-    if (cc.macro.KEY.a in this.keysPressed) {
-      this.mainCharacter.move(DIRECTION.LEFT);
-    }
-    if (cc.macro.KEY.d in this.keysPressed) {
-      this.mainCharacter.move(DIRECTION.RIGHT);
-    }
-    if (cc.macro.KEY.space in this.keysPressed) {
-      this.mainCharacter.jump();
+    if (!this.mainCharacter.isInAStair) {
+      if (cc.macro.KEY.a in this.keysPressed) {
+        this.mainCharacter.move(DIRECTION.LEFT);
+      }
+      if (cc.macro.KEY.d in this.keysPressed) {
+        this.mainCharacter.move(DIRECTION.RIGHT);
+      }
+      if (cc.macro.KEY.space in this.keysPressed) {
+        this.mainCharacter.jump();
+      }
     }
   }
 }

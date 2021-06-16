@@ -1,3 +1,4 @@
+import Stair from '../../Map/Stair';
 import Actor from '../Actor';
 import DIRECTION from '../DIRECTION';
 import PLAYER_STATES from './PLAYER_STATES';
@@ -5,11 +6,13 @@ import PLAYER_STATES from './PLAYER_STATES';
 const { ccclass } = cc._decorator;
 @ccclass
 export default class MainCharacter extends Actor {
-  private facing: DIRECTION = DIRECTION.RIGHT;
+  public facing: DIRECTION = DIRECTION.RIGHT;
 
   private _state: PLAYER_STATES = PLAYER_STATES.Idle;
 
   public isInAStair = false;
+
+  public stairStep: Stair = null;
 
   public get state(): PLAYER_STATES {
     return this._state;
